@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  height: 60px;
+  max-width: 100%;
+}
+
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Header Layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.main-nav {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Dropdown container */
+.nav-list li {
+  position: relative;
+}
+
+/* Style dropdown links */
+.nav-list li ul.sub-menu li {
+  padding: 0;
+}
+
+.nav-list li ul.sub-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo img {
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .nav-list a {
+    font-size: 16px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+
+
+/* navbar style start */
+.nav-list li a {
+  color: #9b9b9b;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 12px 10px;
+  display: inline-block;
+}
+
+.nav-list li.menu-item-has-children > a::after {
+  content: "\f107"; /* Unicode for Font Awesome chevron-down */
+  font-family: "Font Awesome 6 Free"; /* Required for FA icons */
+  font-weight: 900; /* Needed for solid icons */
+  font-size: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #989898;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px; /* spacing between menu items */
+}
+
+.nav-list li ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.nav-list li:hover > ul.sub-menu {
+  display: block;
+}
+
+.nav-list li ul.sub-menu li a {
+  padding: 10px 20px;
+  color: #8e8e8e;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.nav-list li ul.sub-menu li a:hover {
+  background-color: transparent;
+}
+
+
+/* navbar style end */
+
+/* home page */
+.hero-section {
+  background: url('http://localhost/custom-theme/wp-content/uploads/2025/07/novel-banner.png') no-repeat center center / cover;
+  height: 100vh;
+  margin-top: -200px;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-section::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.25em;
+  line-height: 1.3;
+  color: white;
+}
+
+.hero-content h1 span {
+  display: block;
+}
+
+.scroll-text {
+  margin-top: 20px;
+  font-size: 14px!important;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300!important;
+}
+
+/* home page end */
