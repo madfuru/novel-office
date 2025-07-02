@@ -12,15 +12,26 @@
       <!-- Top bar content if any -->
     </div>
 
-    <div class="header-container">
-      <div class="logo">
-        <?php the_custom_logo(); ?>
-      </div>
-      <nav class="main-nav">
-        <?php wp_nav_menu(array(
-          'theme_location' => 'main-menu',
-          'container' => false,
-          'menu_class' => 'nav-list'
-        )); ?>
-      </nav>
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <?php the_custom_logo(); ?>
     </div>
+
+    <!-- Hamburger icon -->
+    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <!-- Main nav -->
+    <nav class="main-nav" id="primary-menu">
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'main-menu',
+        'container' => false,
+        'menu_class' => 'nav-list',
+      ));
+      ?>
+    </nav>
+  </div>
+</header>
